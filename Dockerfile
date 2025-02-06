@@ -1,12 +1,7 @@
-FROM node:18-slim
+FROM node:18.12.0-buster
 
 ENV TZ Asia/Tokyo
 
-WORKDIR /app
+WORKDIR /src
 
-RUN apt-get update \
-    && apt-get install -y \
-    git \
-    vim
-
-    FROM node:22.9.0-alpine3.19
+RUN yarn global add @vue/cli
